@@ -90,7 +90,7 @@ src/test/test_poly.py ........                                                  
 ==================================================================== 8 passed in 0.02s =====================================================================
 2023-11-12 20:11:41,858: CLI Report:
 
-##### Mutatest diagnostic summary
+#### Mutatest diagnostic summary
 ===========================
  - Source location: /workspaces/Mutation_Testing/src
  - Test commands: ['pytest']
@@ -99,14 +99,14 @@ src/test/test_poly.py ........                                                  
  - N locations input: 10
  - Random seed: None
 
-##### Random sample details
+#### Random sample details
 ---------------------
  - Total locations mutated: 10
  - Total locations identified: 55
  - Location sample coverage: 18.18 %
 
 
-##### Running time details
+#### Running time details
 --------------------
  - Clean trial 1 run time: 0:00:00.201581
  - Clean trial 2 run time: 0:00:00.215790
@@ -114,7 +114,7 @@ src/test/test_poly.py ........                                                  
 
 2023-11-12 20:11:41,859: Trial Summary Report:
 
-##### Overall mutation trial summary
+#### Overall mutation trial summary
 ==============================
  - DETECTED: 16
  - SURVIVED: 4
@@ -124,7 +124,7 @@ src/test/test_poly.py ........                                                  
 
 2023-11-12 20:11:41,859: Detected mutations:
 
-##### DETECTED
+#### DETECTED
 --------
  - src/Polynomial.py: (l: 13, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.GtE'>
  - src/Polynomial.py: (l: 13, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.Gt'>
@@ -147,7 +147,7 @@ src/test/test_poly.py ........                                                  
 
 2023-11-12 20:11:41,859: Surviving mutations:
 
-##### SURVIVED
+#### SURVIVED
 --------
  - src/Polynomial.py: (l: 13, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.Lt'>
  - src/Polynomial.py: (l: 66, c: 12) - mutation from AugAssign_Add to AugAssign_Sub
