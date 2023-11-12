@@ -30,4 +30,4 @@ jobs:
         pytest
     - name: Run mutatest
       run: |
-        mutatest
+        mutatest -s src/
