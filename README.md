@@ -162,7 +162,7 @@ src/test/test_poly.py ........                                                  
 - There were also a few harmful ones that survived. Some examples were subtraction and addition,
 as well as < and = , which could result in some serious erros.
 
-### Recommendations for Improving the Test Suite
+## Recommendations for Improving the Test Suite
 Improving the test suite also comes when the added draw back of adding more computation time. This is because mutations are created
 exponentially, and for this reason, it is not always the best case to through this into the building process. For small applications this is completely. Various ways of improving this application involve directly modifying mutatest input parameters and creating custom mutations. For the most part, mutatest handles almost all mutations, but there are a few specific scenarios where new mutations parameters should be created. This is more prominent in large scale applications.
 
