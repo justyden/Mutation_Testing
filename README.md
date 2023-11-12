@@ -1,14 +1,14 @@
 # Mutation_Testing
 An application used to demonstrate mutation testing techniques. This will use the python library [Mutatest](https://mutatest.readthedocs.io/en/latest/install.html) to perform mutation generation.
 
-### Defining Mutation Operators
+## Defining Mutation Operators
 - Mutatest does most of this testing, but it is important to note that certain tests can be excluded.
 - The mutation operators include examples like (- -> +) and (/ -> %) in this case. This simply means thats subtraction will be changed to addititon for example. 
 - More mutations include swapping true to false and false to true, which should introduce a mutation.
 - Mutatest also changes the comparison opperators. Examples include changing != to == which should also result in a mutation.
 - Mutatest even provides mutation for indexs and slicing, but they will not be utalized in this application.
 
-### Description of Applied Mutations and Impacts of the Mutations
+## Description of Applied Mutations and Impacts of the Mutations
 - The implementation of this mutation file is done by Mutatest. Mutatest actually modifies the pycache file to avoid editing the source code directly. This method ensures that the mutations are not directly commited to any type of version control.
 - The following are examples of how the mutation testing is done on the source code. These examples are taken from the Mutatest documentation.
 - ![Example 1](mutation_example1.png)
@@ -18,7 +18,7 @@ An application used to demonstrate mutation testing techniques. This will use th
 - ![Exmaple 4](mutation_example4.png)
 - All of the previous examples should introduce mutations. However if the code is well written, then the mutations should be killed as soon as they appear.
 
-### Summary of Mutant Survival and Killing
+## Summary of Mutant Survival and Killing
 
 #### Console Output
 
@@ -90,7 +90,7 @@ src/test/test_poly.py ........                                                  
 ==================================================================== 8 passed in 0.02s =====================================================================
 2023-11-12 20:11:41,858: CLI Report:
 
-Mutatest diagnostic summary
+##### Mutatest diagnostic summary
 ===========================
  - Source location: /workspaces/Mutation_Testing/src
  - Test commands: ['pytest']
@@ -99,14 +99,14 @@ Mutatest diagnostic summary
  - N locations input: 10
  - Random seed: None
 
-Random sample details
+##### Random sample details
 ---------------------
  - Total locations mutated: 10
  - Total locations identified: 55
  - Location sample coverage: 18.18 %
 
 
-Running time details
+##### Running time details
 --------------------
  - Clean trial 1 run time: 0:00:00.201581
  - Clean trial 2 run time: 0:00:00.215790
@@ -114,7 +114,7 @@ Running time details
 
 2023-11-12 20:11:41,859: Trial Summary Report:
 
-Overall mutation trial summary
+##### Overall mutation trial summary
 ==============================
  - DETECTED: 16
  - SURVIVED: 4
@@ -124,7 +124,7 @@ Overall mutation trial summary
 
 2023-11-12 20:11:41,859: Detected mutations:
 
-DETECTED
+##### DETECTED
 --------
  - src/Polynomial.py: (l: 13, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.GtE'>
  - src/Polynomial.py: (l: 13, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.Gt'>
@@ -147,14 +147,14 @@ DETECTED
 
 2023-11-12 20:11:41,859: Surviving mutations:
 
-SURVIVED
+##### SURVIVED
 --------
  - src/Polynomial.py: (l: 13, c: 11) - mutation from <class 'ast.Eq'> to <class 'ast.Lt'>
  - src/Polynomial.py: (l: 66, c: 12) - mutation from AugAssign_Add to AugAssign_Sub
  - src/Polynomial.py: (l: 73, c: 16) - mutation from <class 'ast.Mult'> to <class 'ast.Div'>
  - src/Polynomial.py: (l: 91, c: 19) - mutation from <class 'ast.Lt'> to <class 'ast.LtE'>
 
-### Analysis of the Test Suite Effectiveness
+## Analysis of the Test Suite Effectiveness
 - It can be seen that there were quite a few mutations that ended up surving from the coverage report.
 - The mutations that survived
 - ![Survived Mutations](mutation_example5.png)
@@ -166,5 +166,5 @@ as well as < and = , which could result in some serious erros.
 Improving the test suite also comes when the added draw back of adding more computation time. This is because mutations are created
 exponentially, and for this reason, it is not always the best case to through this into the building process. For small applications this is completely. Various ways of improving this application involve directly modifying mutatest input parameters and creating custom mutations. For the most part, mutatest handles almost all mutations, but there are a few specific scenarios where new mutations parameters should be created. This is more prominent in large scale applications.
 
-### Conclusion
+## Conclusion
 Mutations are a very powerful software engineering design practice and can help detect problems in code earlier. They were by introducing scenarios in the code that should never work. If they do end up working, then the mutations survives, in which it is up to the developer to find the bug and fix it.
