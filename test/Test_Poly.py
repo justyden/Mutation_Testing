@@ -1,5 +1,8 @@
 import pytest
+import sys
+sys.path.append("./src")
 from Polynomial import Polynomial  # Import the Polynomial class from your module
+
 
 def test_init():
     poly = Polynomial([3, 0, 2])
