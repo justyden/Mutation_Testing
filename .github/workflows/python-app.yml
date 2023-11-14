@@ -28,6 +28,6 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-    - name: Run mutatest
+    - name: Run mutnmut
       run: |
-        mutatest -s src/
+        mutmut run --paths-to-mutate test
