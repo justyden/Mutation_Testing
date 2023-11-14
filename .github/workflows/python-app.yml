@@ -23,7 +23,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest mutatest
+        pip install pytest mutmut
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with pytest
       run: |
@@ -31,5 +31,4 @@ jobs:
         pytest
     - name: Run mutnmut
       run: |
-        cd ..
         mutmut run --paths-to-mutate test
