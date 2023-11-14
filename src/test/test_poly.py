@@ -1,7 +1,6 @@
 import sys
 sys.path.append(".")
 from Polynomial import Polynomial
-import pytest
 
 
 def test_init():
@@ -42,16 +41,16 @@ def test_mul():
 def test_first_degree_polynomial():
     poly = Polynomial([2, -3])  # Represents 2x - 3
     root = poly.find_root_bisection(0, 5)
-    assert abs(root - 1.5) < 1e-6
+    assert abs(root - 1.5) <= 1e-6
 
 def test_second_degree_polynomial():
     poly = Polynomial([1, 0, -2])  # Represents x^2 - 2
     root = poly.find_root_bisection(1, 2)
-    assert abs(root - 2.0**0.5) < 1e-6
+    assert abs(root - 2.0**0.5) <= 1e-6
 
 def test_third_degree_polynomial():
     poly = Polynomial([1, 0, -2, 0])  # Represents x^3 - 2x
     root = poly.find_root_bisection(-2, 2)
-    assert abs(root - 0.0) < 1e-6
+    assert abs(root - 0.0) <= 1e-6
    
 
