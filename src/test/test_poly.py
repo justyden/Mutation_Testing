@@ -1,6 +1,7 @@
 import sys
 sys.path.append(".")
-from src.Polynomial import Polynomial
+from Polynomial import Polynomial
+import pytest
 
 
 def test_init():
