@@ -41,7 +41,7 @@ jobs:
       run: |
         cd src
         pytest
-    - name: Run mutnmut
+    - name: Run mutmut
       run: |
-        cd src
+        cd ..
         mutmut run --paths-to-mutate test
